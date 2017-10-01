@@ -27,12 +27,18 @@
 #ifndef LedControl_h
 #define LedControl_h
 
+#ifdef ESP32
+#include <pgmspace.h>
+
+#include <Arduino.h>
+#else
 #include <avr/pgmspace.h>
 
 #if (ARDUINO >= 100)
 #include <Arduino.h>
 #else
 #include <WProgram.h>
+#endif
 #endif
 
 /*
